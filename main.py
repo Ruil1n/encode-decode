@@ -1,16 +1,20 @@
 # _*_ coding:UTF-8 _*_
-from modules import b64
+from modules import base
 from modules import url
 from modules import caesar
 
 def start():
     print('''
-1.base64    Encode
-2.base64    Decode
-3.URL       Encode
-4.URL       Decode
-5.Caesar    Encode
-6.Caesar    Brute_Decode
+1. base64 Encode
+2. base64 Decode
+3. base32 Encode
+4. base32 Decode
+5. base16 Encode
+6. base16 Decode
+7. URL    Encode
+8. URL    Decode
+9. Caesar    Encode
+10.Caesar    Brute_Decode
     ''')
     choice = input('Select：')
     return int(choice)
@@ -20,17 +24,26 @@ def main():
         while True:
             main_choice = start()
             if main_choice == 1:
-                b64.en()
+                base.en64()
             elif main_choice == 2:
-                b64.de()
+                base.de64()
             elif main_choice == 3:
-                url.en()
+                base.en32()
             elif main_choice == 4:
-                url.de()
+                base.de32()
             elif main_choice == 5:
-                caesar.en()
+                base.en16()
             elif main_choice == 6:
+                base.de16()
+            elif main_choice == 7:
+                url.en()
+            elif main_choice == 8:
+                url.de()
+            elif main_choice == 9:
+                caesar.en()
+            elif main_choice == 10:
                 caesar.brute()
+                
             elif main_choice == 0:
                 exit(0)
 
