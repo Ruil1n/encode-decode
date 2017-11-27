@@ -1,20 +1,20 @@
 # _*_ coding:UTF-8 _*_
-from modules import base
-from modules import url
-from modules import caesar
+from modules import base,url,caesar,morse
 
 def start():
     print('''
-1. base64 Encode
-2. base64 Decode
-3. base32 Encode
-4. base32 Decode
-5. base16 Encode
-6. base16 Decode
-7. URL    Encode
-8. URL    Decode
-9. Caesar    Encode
-10.Caesar    Brute_Decode
+1.  base64 Encode
+2.  base64 Decode
+3.  base32 Encode
+4.  base32 Decode
+5.  base16 Encode
+6.  base16 Decode
+7.  URL    Encode
+8.  URL    Decode
+9.  Caesar Encode
+10. Caesar Brute_Decode
+11. Morse  Encode
+12. Morse  Decode
     ''')
     choice = input('Select：')
     return int(choice)
@@ -43,7 +43,11 @@ def main():
                 caesar.en()
             elif main_choice == 10:
                 caesar.brute()
-                
+            elif main_choice == 11:
+                morse.en()
+            # elif main_choice == 12:
+            #     morse.de()
+
             elif main_choice == 0:
                 exit(0)
 

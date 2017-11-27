@@ -11,7 +11,7 @@ From https://hackfun.org/2017/02/22/CTF%E4%B8%AD%E9%82%A3%E4%BA%9B%E8%84%91%E6%B
 
   1.ASCII编码
 
-√ 2.Base64/32/16编码
+  2.Base64/32/16编码
 
   3.shellcode编码
 
@@ -21,7 +21,7 @@ From https://hackfun.org/2017/02/22/CTF%E4%B8%AD%E9%82%A3%E4%BA%9B%E8%84%91%E6%B
 
   6.UUencode编码
 
-√ 7.URL编码
+  7.URL编码
 
   8.Unicode编码
 
