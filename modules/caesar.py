@@ -1,24 +1,32 @@
 # _*_ coding:UTF-8 _*_
-from pycipher import Caesar
+
+
+def change(c, i):
+    c = c.lower()
+    num = ord(c)
+    if num >= 97 and num <= 122:
+        num = 97 + ((num - 97) + i) % 26
+    return chr(num)
 
 
 def en():
     caesarinput = input('input:\n')
     key = input('key(int):\n')
-    output = Caesar(int(key)).encipher(caesarinput, keep_punct=True)
-    print(output)
+    caesarinput = str(caesarinput)
+    key = int(key)
+    output = ''
+    for s in caesarinput:
+        output += change(s, key)
 
-
-def de():
-    caesarinput = input('input:\n')
-    key = input('key(int):\n')
-    output = Caesar(int(key)).decipher(caesarinput, keep_punct=True)
     print(output)
 
 
 def brute():
     caesarinput = input('input:\n')
+    caesarinput = str(caesarinput)
     for i in range(26):
-        print('%s:' % i, end='')
-        output = Caesar(int(i)).encipher(caesarinput, keep_punct=True)
+        output = ''
+        i=int(i)+1
+        for s in caesarinput:
+            output += change(s, i)
         print(output)

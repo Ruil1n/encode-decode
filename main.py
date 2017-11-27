@@ -10,8 +10,7 @@ def start():
 3.URL       Encode
 4.URL       Decode
 5.Caesar    Encode
-6.Caesar    Decode
-7.Caesar    Brute
+6.Caesar    Brute_Decode
     ''')
     choice = input('Select：')
     return int(choice)
@@ -31,8 +30,6 @@ def main():
             elif main_choice == 5:
                 caesar.en()
             elif main_choice == 6:
-                caesar.en()
-            elif main_choice == 7:
                 caesar.brute()
             elif main_choice == 0:
                 exit(0)
